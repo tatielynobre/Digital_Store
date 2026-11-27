@@ -1,0 +1,170 @@
+.site-header {
+  background: var(--white);
+  border-bottom: 1px solid var(--light-gray-3);
+  padding: 24px max(24px, calc((100% - 1180px) / 2)) 0;
+}
+
+.site-header__top {
+  align-items: center;
+  display: flex;
+  gap: 32px;
+  justify-content: space-between;
+}
+
+.site-header__logo {
+  display: inline-flex;
+  flex: 0 0 auto;
+}
+
+.site-header__search {
+  background: var(--light-gray-3);
+  border-radius: 8px;
+  display: flex;
+  flex: 1;
+  max-width: 560px;
+  min-width: 180px;
+  overflow: hidden;
+}
+
+.site-header__search input {
+  background: transparent;
+  border: 0;
+  color: var(--dark-gray-2);
+  flex: 1;
+  font: inherit;
+  min-width: 0;
+  outline: none;
+  padding: 14px 16px;
+}
+
+.site-header__search input::placeholder {
+  color: var(--dark-gray-3);
+}
+
+.site-header__search button {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  color: var(--dark-gray-3);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  padding: 0 16px;
+}
+
+.site-header__search button svg {
+  fill: none;
+  height: 20px;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-width: 2;
+  width: 20px;
+}
+
+.site-header__account {
+  align-items: center;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 24px;
+}
+
+.site-header__signup {
+  color: #474747;
+  font-size: 16px;
+  text-decoration: underline;
+}
+
+.site-header__login {
+  align-items: center;
+  background: var(--primary);
+  border-radius: 4px;
+  color: var(--white);
+  display: inline-flex;
+  font-size: 14px;
+  font-weight: 700;
+  height: 40px;
+  justify-content: center;
+  text-decoration: none;
+  width: 114px;
+}
+
+.site-header__cart {
+  height: 21px;
+  width: 20px;
+}
+
+.site-header__nav {
+  display: flex;
+  gap: 32px;
+  margin-top: 24px;
+}
+
+.site-header__nav a {
+  border-bottom: 3px solid transparent;
+  color: var(--dark-gray-2);
+  padding: 0 0 12px;
+  text-decoration: none;
+}
+
+.site-header__nav a:hover,
+.site-header__nav a:focus-visible,
+.site-header__nav a.active {
+  border-bottom-color: var(--primary);
+  color: var(--primary);
+}
+
+.visually-hidden {
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+@media (max-width: 800px) {
+  .site-header {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .site-header__top {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .site-header__search {
+    flex-basis: 100%;
+    order: 1;
+    max-width: none;
+  }
+
+  .site-header__account {
+    gap: 12px;
+  }
+
+  .site-header__signup {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header__logo img {
+    height: auto;
+    width: 190px;
+  }
+
+  .site-header__login {
+    width: 76px;
+  }
+
+  .site-header__nav {
+    gap: 20px;
+    overflow-x: auto;
+  }
+
+  .site-header__nav a {
+    flex: 0 0 auto;
+  }
+}
